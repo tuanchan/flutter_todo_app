@@ -16,6 +16,10 @@ jobs:
       - name: Pub get
         run: flutter pub get
 
+      # ✅ Tạo/khôi phục cấu hình iOS (Runner.xcodeproj, v.v.)
+      - name: Regenerate iOS platform files
+        run: flutter create .
+
       - name: Build iOS (no codesign)
         run: flutter build ios --release --no-codesign
 
